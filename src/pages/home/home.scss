@@ -1,3 +1,92 @@
 page-home {
 
 }
+
+
+.toast__alert { /* clase personalizada, se agrega desde el TS y puede servir para darles estilos distintos a cada toast */
+  .toast-wrapper { /* clase agregada por ionic posee el background-color del toast */
+    background-color: rgb(245, 185, 198);
+    border: 1px solid rgb(231,58, 94);
+    width: 95%;
+    border-radius: .8rem;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    .toast-message, .toast-button { 
+      font-weight: 500;
+      padding: 1.6rem;
+    }
+    .toast-message { /* clase que contiene el texto principal, 100% modificable */
+      color: rgb(67, 72, 76);
+    }
+    .toast-button { /* clase del botón para cerrar el toast, permite los mismos estilos que cualquier botón de ionic */
+      color: rgb(231,58, 94);
+      font-size: 1.8rem;
+    }
+    .toast-container::before { /* con la pseudo clase ::before podemos colocar los iconos que queramos en el toast, aplicando el before en toast-container logramos que el icono y el texto queden bien alineados */
+      font-family: "Ionicons";
+      font-size: 3rem;
+      margin-left: 1.6rem;
+      content: "\f103";
+      vertical-align: middle;
+      color: rgb(231,58, 94);
+    }
+  }
+}
+
+.toast__warning {
+  .toast-wrapper {
+    background-color: rgb(255, 243, 222);
+    border: 1px solid rgb(245, 166, 35);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    border-radius: .8rem;
+    .toast-message, .toast-button { 
+      font-weight: 500;
+      padding: 1.6rem;
+    }
+    .toast-message { 
+      color: rgb(245, 166, 35);
+    }
+    .toast-button { 
+      color: rgb(245, 166, 35);
+      font-size: 1.8rem;
+    }
+    .toast-container::before {
+      font-family: "Ionicons";
+      font-size: 3rem;
+      margin-left: 1.6rem;
+      content: "\f103";
+      vertical-align: middle;
+      color: rgb(245, 166, 35);
+    }
+  }
+}
+
+.toast__notifications {
+  .toast-wrapper {
+    background-color: rgb(67, 72, 76);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    border-radius: .8rem;
+    .toast-message, .toast-button { 
+      font-weight: 500;
+      padding: 1.6rem;
+    }
+    .toast-message { 
+      color: #fff;
+    }
+    .toast-button { 
+      color: rgb(80, 227, 194);
+      font-size: 1.8rem;
+    }
+    .toast-container::before {
+      font-family: "Ionicons";
+      font-size: 2rem;
+      margin-left: 1.6rem;
+      content: "\f2b1";
+      vertical-align: middle;
+      color: rgb(80, 227, 194);
+    }
+  }
+}
+
+
